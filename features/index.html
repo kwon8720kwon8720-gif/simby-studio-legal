@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Features — Simby Studio</title>
+  <meta name="description" content="What Simby Studio does: official TikTok Content Posting API publishing, creator-controlled privacy and interaction settings, commercial disclosure, preview, express consent, and upload status tracking." />
+  <link rel="icon" href="../favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="192x192" href="../icon-192.png" />
+  <link rel="apple-touch-icon" href="../icon-192.png" />
+  <link rel="stylesheet" href="../assets/site.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="inner">
+      <a class="brand" href="../">
+        <img src="../icon-192.png" alt="Simby Studio" width="30" height="30" />
+        <span>Simby Studio</span>
+      </a>
+      <nav class="site-nav">
+        <a href="./" aria-current="page">Features</a>
+        <a href="../how-it-works/">How it works</a>
+        <a href="../post/">Post to TikTok</a>
+        <a href="../support/">Support</a>
+        <a href="../terms/">Terms of Service</a>
+        <a href="../privacy-policy/">Privacy Policy</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="wrap">
+      <h1>Features</h1>
+      <p class="lead">Simby Studio does one thing: it gets a short video you made onto your own TikTok or YouTube account, using the official APIs, with every publishing decision left to you.</p>
+
+      <h2>Publishing to TikTok</h2>
+      <div class="grid grid-2">
+        <div class="card">
+          <h3>Creator account card</h3>
+          <p>Before anything else the screen shows which TikTok account will receive the post — nickname, username, and the maximum video duration that account allows. If you have more than one account connected, you can see at a glance which one is active.</p>
+        </div>
+        <div class="card">
+          <h3>Privacy level with no default</h3>
+          <p>The privacy dropdown is filled from the options TikTok reports for your account, and nothing is preselected. The Post button stays disabled until you deliberately pick one.</p>
+        </div>
+        <div class="card">
+          <h3>Interaction toggles off by default</h3>
+          <p>Comment, Duet, and Stitch all start unchecked. If your account has any of them disabled at the platform level, the matching toggle is greyed out and cannot be enabled here.</p>
+        </div>
+        <div class="card">
+          <h3>Commercial content disclosure</h3>
+          <p>Disclosure starts off. Turning it on reveals the "Your Brand" and "Branded Content" choices, and the consent text updates to include the Branded Content Policy. Branded content cannot be posted with the "Only me" privacy level.</p>
+        </div>
+        <div class="card">
+          <h3>Preview and express consent</h3>
+          <p>You see the actual clip, the editable title, and the settings that will be applied. A consent checkbox must be ticked before the Post button becomes active. Simby Studio never adds a watermark of its own.</p>
+        </div>
+        <div class="card">
+          <h3>Upload status tracking</h3>
+          <p>After posting, the status of the upload is polled and reported in plain language until TikTok confirms the publish finished or reports an error.</p>
+        </div>
+      </div>
+
+      <h2>Permissions we request</h2>
+      <p>Simby Studio asks for the minimum scopes needed to do the job, and nothing beyond them.</p>
+      <table class="data">
+        <thead>
+          <tr><th>Scope</th><th>Why it is needed</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>user.info.basic</code></td>
+            <td>To display which TikTok account is connected and will receive the post, and to read the account's posting limits such as maximum video duration.</td>
+          </tr>
+          <tr>
+            <td><code>video.upload</code></td>
+            <td>To transfer the video file you selected to TikTok so it can be reviewed in the preview step before publishing.</td>
+          </tr>
+          <tr>
+            <td><code>video.publish</code></td>
+            <td>To complete the publish after you have chosen your settings and given express consent.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>Publishing to YouTube</h2>
+      <p>The same workflow supports YouTube through the official YouTube Data API. You authorize your Google account, choose the title, description, and visibility, review the preview, and confirm before the upload starts.</p>
+
+      <h2>What Simby Studio deliberately does not do</h2>
+      <ul>
+        <li>It does not post to accounts you have not personally authorized.</li>
+        <li>It does not scrape, mirror, or re-upload videos belonging to other creators.</li>
+        <li>It does not schedule bulk posting campaigns across many accounts.</li>
+        <li>It does not sell, share, or advertise against your data.</li>
+        <li>It does not add its own watermark or branding to your video.</li>
+      </ul>
+
+      <div class="callout">
+        <p>Ready to try it? Open the <a href="../post/">Post to TikTok</a> screen, or read the step-by-step walkthrough in <a href="../how-it-works/">How it works</a>.</p>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="inner">
+      <div class="fbrand">
+        <img src="../icon-192.png" alt="Simby Studio" width="24" height="24" />
+        <span>Simby Studio</span>
+      </div>
+      <nav>
+        <a href="../features/">Features</a>
+        <a href="../how-it-works/">How it works</a>
+        <a href="../support/">Support</a>
+        <a href="../terms/">Terms of Service</a>
+        <a href="../privacy-policy/">Privacy Policy</a>
+        <a href="mailto:support@simbystudio.com">support@simbystudio.com</a>
+      </nav>
+      <p class="copy">© 2026 Simby Studio. TikTok is a trademark of ByteDance Ltd. YouTube is a trademark of Google LLC. Simby Studio is not affiliated with or endorsed by either company.</p>
+    </div>
+  </footer>
+</body>
+</html>

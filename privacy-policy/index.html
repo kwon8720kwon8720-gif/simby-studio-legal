@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Privacy Policy — Simby Studio</title>
+  <meta name="description" content="Simby Studio Privacy Policy: what data is collected, why it is used, who it is shared with, how long it is kept, and how to request deletion." />
+  <link rel="icon" href="../favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="192x192" href="../icon-192.png" />
+  <link rel="apple-touch-icon" href="../icon-192.png" />
+  <link rel="stylesheet" href="../assets/site.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="inner">
+      <a class="brand" href="../">
+        <img src="../icon-192.png" alt="Simby Studio" width="30" height="30" />
+        <span>Simby Studio</span>
+      </a>
+      <nav class="site-nav">
+        <a href="../features/">Features</a>
+        <a href="../how-it-works/">How it works</a>
+        <a href="../post/">Post to TikTok</a>
+        <a href="../support/">Support</a>
+        <a href="../terms/">Terms of Service</a>
+        <a href="./" aria-current="page">Privacy Policy</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="wrap narrow">
+      <h1>Privacy Policy</h1>
+      <p class="meta">Applies to the Simby Studio application and this website. Effective date: August 3, 2026. Last updated: August 3, 2026.</p>
+
+      <p>Simby Studio is a creator tool that publishes videos you made to social accounts you personally own and authorize. This policy explains exactly what information passes through the tool, why, and what control you have over it.</p>
+
+      <h2>1. Information we collect</h2>
+      <table class="data">
+        <thead>
+          <tr><th>Data</th><th>Source</th><th>Why we need it</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>TikTok basic profile — nickname, username, avatar URL, account posting limits such as maximum video duration</td>
+            <td>TikTok API, after you authorize the <code>user.info.basic</code> scope</td>
+            <td>To show you which account will receive the post and to validate your clip against that account's limits</td>
+          </tr>
+          <tr>
+            <td>OAuth access and refresh tokens for TikTok and, if you connect it, YouTube</td>
+            <td>Issued by the platform when you complete its own login screen</td>
+            <td>To upload and publish on your behalf without asking you to log in again for every clip</td>
+          </tr>
+          <tr>
+            <td>Video file and its metadata — title, privacy level, interaction settings, commercial disclosure flags</td>
+            <td>Chosen and entered by you in the publishing screen</td>
+            <td>To perform the upload you requested with exactly the settings you selected</td>
+          </tr>
+          <tr>
+            <td>Technical logs — timestamps, upload status codes, error messages</td>
+            <td>Generated locally while an upload runs</td>
+            <td>To show you upload progress and to let you diagnose a failed publish</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>We do not collect your password. Authentication happens entirely on the platform's own login page, and Simby Studio only ever receives the resulting token.</p>
+
+      <h2>2. How your information is used</h2>
+      <ul>
+        <li>To display the connected account so you can confirm the publishing destination.</li>
+        <li>To transfer the video you selected to TikTok or YouTube through their official APIs.</li>
+        <li>To apply the privacy level, interaction settings, and commercial disclosure you chose.</li>
+        <li>To report the status of an upload back to you until it succeeds or fails.</li>
+      </ul>
+      <p>Your information is not used for advertising, profiling, training machine learning models, or any purpose unrelated to publishing the video you asked us to publish.</p>
+
+      <h2>3. Where your data is stored</h2>
+      <p>Simby Studio runs on your own device. OAuth tokens and local logs are written to a permission-restricted file on that device. Your video file is read from your device and sent directly to the platform API endpoint. Simby Studio does not operate a media server and does not retain a copy of your video.</p>
+      <p>This website is static and is served from a standard web host. It sets no advertising or analytics cookies. The host may keep short-lived server request logs, which are outside our control and are not linked to your social accounts.</p>
+
+      <h2>4. Sharing with third parties</h2>
+      <p>We do not sell, rent, or trade personal information. We do not share your data with advertisers, data brokers, or analytics vendors.</p>
+      <p>Data is transmitted only to the platform you explicitly authorized, in order to carry out the action you requested:</p>
+      <ul>
+        <li><a href="https://www.tiktok.com/legal/page/row/privacy-policy/en" rel="noopener">TikTok Privacy Policy</a> — when you publish to TikTok</li>
+        <li><a href="https://policies.google.com/privacy" rel="noopener">Google Privacy Policy</a> — when you publish to YouTube</li>
+      </ul>
+
+      <h2>5. TikTok permissions we request</h2>
+      <table class="data">
+        <thead>
+          <tr><th>Scope</th><th>What it allows</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><code>user.info.basic</code></td><td>Read your public profile basics so the tool can show which account is connected.</td></tr>
+          <tr><td><code>video.upload</code></td><td>Send your selected video file to TikTok so it can be previewed before publishing.</td></tr>
+          <tr><td><code>video.publish</code></td><td>Complete the publish after you give express consent in the app.</td></tr>
+        </tbody>
+      </table>
+      <p>No scope beyond these is requested, and none of them permits Simby Studio to read your private messages, followers, or the content of other creators.</p>
+
+      <h2>6. How long data is kept</h2>
+      <ul>
+        <li><strong>OAuth tokens:</strong> kept on your device until they expire, until you revoke access at the platform, or until you delete them — whichever comes first.</li>
+        <li><strong>Local logs:</strong> kept on your device until you delete them. They are never transmitted to us.</li>
+        <li><strong>Video files:</strong> not retained by Simby Studio at any point. After the upload completes, retention is governed by the platform you published to.</li>
+      </ul>
+
+      <h2>7. Your rights and how to exercise them</h2>
+      <ul>
+        <li><strong>Withdraw access at any time.</strong> In TikTok: Settings and privacy → Security and permissions → Apps and services → remove Simby Studio. For Google: <a href="https://myaccount.google.com/permissions" rel="noopener">myaccount.google.com/permissions</a>. Revocation takes effect immediately.</li>
+        <li><strong>Delete local data.</strong> Removing the Simby Studio secrets file and log folder from your device erases every token and log the tool holds.</li>
+        <li><strong>Request deletion or a copy of your data.</strong> Email <a href="mailto:support@simbystudio.com">support@simbystudio.com</a> with the subject line <em>Data deletion request</em> and the username you connected. We will confirm and complete the request within 30 days.</li>
+        <li><strong>Ask a question or complain.</strong> Use the same address; see also the <a href="../support/">Support</a> page.</li>
+      </ul>
+
+      <h2>8. Security</h2>
+      <p>Credentials are stored with restricted file permissions on your device, and all communication with platform APIs uses encrypted HTTPS connections. Because the tool runs locally, keeping your own device secure and revoking access when you stop using the tool are important parts of protecting your account.</p>
+
+      <h2>9. Children's privacy</h2>
+      <p>Simby Studio is not directed at children under 13, or under the higher minimum age required in your region. We do not knowingly collect information from them. If you believe a child has used the tool, contact us and we will assist in removing any associated data.</p>
+
+      <h2>10. International users</h2>
+      <p>Because processing happens on your own device, your data does not travel to Simby Studio infrastructure in another country. When you publish, your video and settings are sent to the platform you chose, and that platform's own international transfer terms apply.</p>
+
+      <h2>11. Changes to this policy</h2>
+      <p>If this policy changes, the effective date at the top of the page is updated and the revised version is published here. Material changes will also be noted on the <a href="../support/">Support</a> page.</p>
+
+      <h2>12. Contact</h2>
+      <p>Simby Studio — <a href="mailto:support@simbystudio.com">support@simbystudio.com</a></p>
+
+      <p><a href="../terms/">Terms of Service</a> · <a href="../support/">Support</a></p>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="inner">
+      <div class="fbrand">
+        <img src="../icon-192.png" alt="Simby Studio" width="24" height="24" />
+        <span>Simby Studio</span>
+      </div>
+      <nav>
+        <a href="../features/">Features</a>
+        <a href="../how-it-works/">How it works</a>
+        <a href="../support/">Support</a>
+        <a href="../terms/">Terms of Service</a>
+        <a href="../privacy-policy/">Privacy Policy</a>
+        <a href="mailto:support@simbystudio.com">support@simbystudio.com</a>
+      </nav>
+      <p class="copy">© 2026 Simby Studio. TikTok is a trademark of ByteDance Ltd. YouTube is a trademark of Google LLC. Simby Studio is not affiliated with or endorsed by either company.</p>
+    </div>
+  </footer>
+</body>
+</html>

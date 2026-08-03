@@ -1,19 +1,56 @@
 <!doctype html>
-<html lang="ko">
+<html lang="en">
 <head>
   <meta charset="utf-8" />
-  <title>Simby Studio OAuth Callback</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <style>
-    body { font-family: -apple-system, BlinkMacSystemFont, sans-serif; max-width: 560px; margin: 48px auto; padding: 0 16px; line-height: 1.5; }
-    .ok { color: #0a7a32; }
-    .err { color: #b00020; }
-    code { word-break: break-all; }
-  </style>
+  <title>Signing in — Simby Studio</title>
+  <meta name="robots" content="noindex" />
+  <link rel="icon" href="../../favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="192x192" href="../../icon-192.png" />
+  <link rel="apple-touch-icon" href="../../icon-192.png" />
+  <link rel="stylesheet" href="../../assets/site.css" />
 </head>
 <body>
-  <h1>Simby Studio</h1>
-  <p id="msg">로그인 처리 중…</p>
+  <header class="site-header">
+    <div class="inner">
+      <a class="brand" href="../../">
+        <img src="../../icon-192.png" alt="Simby Studio" width="30" height="30" />
+        <span>Simby Studio</span>
+      </a>
+      <nav class="site-nav">
+        <a href="../../terms/">Terms of Service</a>
+        <a href="../../privacy-policy/">Privacy Policy</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="wrap narrow">
+      <h1>Completing sign-in</h1>
+      <p id="msg">Processing your authorization…</p>
+      <p class="meta">Simby Studio runs on your own computer, so this page hands the authorization result back to the desktop app. You can close this tab once the app confirms the connection.</p>
+      <p><a href="../../">Return to Simby Studio</a></p>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="inner">
+      <div class="fbrand">
+        <img src="../../icon-192.png" alt="Simby Studio" width="24" height="24" />
+        <span>Simby Studio</span>
+      </div>
+      <nav>
+        <a href="../../features/">Features</a>
+        <a href="../../how-it-works/">How it works</a>
+        <a href="../../support/">Support</a>
+        <a href="../../terms/">Terms of Service</a>
+        <a href="../../privacy-policy/">Privacy Policy</a>
+        <a href="mailto:support@simbystudio.com">support@simbystudio.com</a>
+      </nav>
+      <p class="copy">© 2026 Simby Studio.</p>
+    </div>
+  </footer>
+
   <script>
     (function () {
       const params = new URLSearchParams(window.location.search);
@@ -21,18 +58,15 @@
       const code = params.get('code');
       const msg = document.getElementById('msg');
       if (err) {
-        msg.className = 'err';
-        msg.textContent = '로그인 오류: ' + err;
+        msg.textContent = 'Authorization error: ' + err + '. Please return to Simby Studio and try signing in again.';
         return;
       }
       if (!code) {
-        msg.className = 'err';
-        msg.textContent = 'code가 없습니다. 다시 로그인해주세요.';
+        msg.textContent = 'No authorization code was returned. Please return to Simby Studio and start the sign-in again.';
         return;
       }
-      // Forward to local callback server
       const local = 'http://127.0.0.1:8787/callback?' + params.toString();
-      msg.innerHTML = '로컬 앱으로 연결 중…<br><small>안 넘어가면 <a href="' + local + '">여기</a>를 누르세요.</small>';
+      msg.innerHTML = 'Connecting to the Simby Studio desktop app…<br /><small>If nothing happens, <a href="' + local + '">click here</a>.</small>';
       window.location.replace(local);
     })();
   </script>

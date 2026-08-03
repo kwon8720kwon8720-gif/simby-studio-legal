@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Page not found — Simby Studio</title>
+  <meta name="robots" content="noindex" />
+  <link rel="icon" href="/favicon.ico" sizes="any" id="fav" />
+  <link rel="stylesheet" href="/assets/site.css" id="css" />
+  <script>
+    // GitHub Pages serves this file for any depth, so resolve the site root once
+    // and rewrite the asset and navigation URLs against it.
+    (function () {
+      var m = location.pathname.match(/^\/[^\/]+\//);
+      var base = (location.hostname.endsWith("github.io") && m) ? m[0] : "/";
+      document.getElementById("css").href = base + "assets/site.css";
+      document.getElementById("fav").href = base + "favicon.ico";
+      document.addEventListener("DOMContentLoaded", function () {
+        document.querySelectorAll("[data-rel]").forEach(function (n) {
+          var t = n.getAttribute("data-rel");
+          if (n.tagName === "IMG") { n.src = base + t; } else { n.href = base + t; }
+        });
+      });
+    })();
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="inner">
+      <a class="brand" href="/" data-rel="">
+        <img src="/icon-192.png" data-rel="icon-192.png" alt="Simby Studio" width="30" height="30" />
+        <span>Simby Studio</span>
+      </a>
+      <nav class="site-nav">
+        <a href="/features/" data-rel="features/">Features</a>
+        <a href="/how-it-works/" data-rel="how-it-works/">How it works</a>
+        <a href="/support/" data-rel="support/">Support</a>
+        <a href="/terms/" data-rel="terms/">Terms of Service</a>
+        <a href="/privacy-policy/" data-rel="privacy-policy/">Privacy Policy</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="wrap narrow">
+      <h1>Page not found</h1>
+      <p>That address does not exist on this site. Try one of these instead.</p>
+      <ul>
+        <li><a href="/" data-rel="">Home</a></li>
+        <li><a href="/post/" data-rel="post/">Post to TikTok</a></li>
+        <li><a href="/support/" data-rel="support/">Support</a></li>
+        <li><a href="/terms/" data-rel="terms/">Terms of Service</a></li>
+        <li><a href="/privacy-policy/" data-rel="privacy-policy/">Privacy Policy</a></li>
+      </ul>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="inner">
+      <div class="fbrand">
+        <img src="/icon-192.png" data-rel="icon-192.png" alt="Simby Studio" width="24" height="24" />
+        <span>Simby Studio</span>
+      </div>
+      <nav>
+        <a href="/support/" data-rel="support/">Support</a>
+        <a href="/terms/" data-rel="terms/">Terms of Service</a>
+        <a href="/privacy-policy/" data-rel="privacy-policy/">Privacy Policy</a>
+        <a href="mailto:support@simbystudio.com">support@simbystudio.com</a>
+      </nav>
+      <p class="copy">© 2026 Simby Studio.</p>
+    </div>
+  </footer>
+</body>
+</html>

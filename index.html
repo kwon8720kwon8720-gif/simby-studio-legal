@@ -4,44 +4,118 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Simby Studio</title>
-  <style>
-    :root { color-scheme: light; --bg:#0f1419; --fg:#e8eef4; --muted:#9aabba; --accent:#6ec1ff; }
-    body { margin:0; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; background:linear-gradient(160deg,#0f1419 0%,#1a2430 55%,#12202b 100%); color:var(--fg); min-height:100vh; }
-    header { max-width:720px; margin:0 auto; padding:28px 20px 0; display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap; align-items:center; }
-    header nav a { color:var(--accent); margin-left:14px; font-weight:600; }
-    main { max-width:720px; margin:0 auto; padding:24px 20px 80px; }
-    h1 { font-size:2rem; letter-spacing:-0.02em; margin:0 0 12px; }
-    p { color:var(--muted); line-height:1.6; }
-    a { color:var(--accent); }
-    ul { line-height:1.8; padding-left:1.2rem; }
-    .card { margin-top:28px; padding:20px 22px; border:1px solid rgba(255,255,255,.08); border-radius:14px; background:rgba(255,255,255,.03); }
-    .cta { display:inline-block; margin-top:8px; padding:12px 16px; border-radius:10px; background:var(--accent); color:#081018; font-weight:700; text-decoration:none; }
-  </style>
+  <meta name="description" content="Simby Studio is a creator tool that publishes your own short gameplay videos to your own TikTok and YouTube accounts through the official platform APIs, with full control over privacy, interactions, and commercial disclosure." />
+  <link rel="icon" href="favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="192x192" href="icon-192.png" />
+  <link rel="apple-touch-icon" href="icon-192.png" />
+  <meta property="og:title" content="Simby Studio" />
+  <meta property="og:description" content="Publish your own short gameplay videos to TikTok and YouTube through the official platform APIs." />
+  <meta property="og:image" content="icon-512.png" />
+  <meta property="og:type" content="website" />
+  <link rel="stylesheet" href="assets/site.css" />
 </head>
 <body>
-  <header>
-    <strong>Simby Studio</strong>
-    <!-- App Review: Privacy Policy + Terms must be visible without opening a menu -->
-    <nav>
-      <a href="./terms/">Terms of Service</a>
-      <a href="./privacy/">Privacy Policy</a>
-      <a href="./post/">Post to TikTok</a>
-    </nav>
-  </header>
-  <main>
-    <h1>Simby Studio</h1>
-    <p>Creator tools for publishing short gameplay videos to TikTok and YouTube using official platform APIs. Creators authorize their own accounts, preview content, choose privacy and interaction settings, disclose commercial content, and expressly consent before anything is uploaded.</p>
-    <div class="card">
-      <p><strong>Post to TikTok</strong> — full Content Posting API UX (creator info, editable title, privacy with no default, interaction toggles off by default, commercial disclosure, preview, consent, status polling).</p>
-      <a class="cta" href="./post/">Open Post to TikTok</a>
+  <header class="site-header">
+    <div class="inner">
+      <a class="brand" href="./">
+        <img src="icon-192.png" alt="Simby Studio" width="30" height="30" />
+        <span>Simby Studio</span>
+      </a>
+      <nav class="site-nav">
+        <a href="features/">Features</a>
+        <a href="how-it-works/">How it works</a>
+        <a href="post/">Post to TikTok</a>
+        <a href="support/">Support</a>
+        <a href="terms/">Terms of Service</a>
+        <a href="privacy-policy/">Privacy Policy</a>
+      </nav>
     </div>
-    <div class="card">
-      <ul>
-        <li><a href="./terms/">Terms of Service</a></li>
-        <li><a href="./privacy/">Privacy Policy</a></li>
-        <li><a href="./demo/simby_studio_ui_login_upload_demo.mp4">Previous demo video</a></li>
-      </ul>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="wrap">
+        <span class="eyebrow">Creator publishing tool</span>
+        <h1>Publish your gameplay clips without leaving your desk.</h1>
+        <p class="lead">Simby Studio takes the short videos you already record, lets you set the title, privacy, and interaction settings, and publishes them to <strong>your own</strong> TikTok and YouTube accounts through each platform's official API. Nothing is uploaded until you review a preview and give explicit consent.</p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="post/">Open Post to TikTok</a>
+          <a class="btn btn-ghost" href="how-it-works/">See how it works</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="wrap">
+      <h2>What it does</h2>
+      <div class="grid grid-3">
+        <div class="card">
+          <div class="ico">◆</div>
+          <h3>Official API publishing</h3>
+          <p>Uploads run through the TikTok Content Posting API and the YouTube Data API. No automation of the mobile app, no scraping, no unofficial endpoints.</p>
+        </div>
+        <div class="card">
+          <div class="ico">◈</div>
+          <h3>You choose every setting</h3>
+          <p>Privacy level has no preselected default. Comment, Duet, and Stitch stay off until you turn them on. Commercial disclosure is off by default.</p>
+        </div>
+        <div class="card">
+          <div class="ico">◉</div>
+          <h3>Preview before consent</h3>
+          <p>You see the exact clip, title, and settings that will be published, then tick an explicit consent box. Upload status is reported back to you until it completes.</p>
+        </div>
+      </div>
+
+      <h2>Inside the publishing screen</h2>
+      <p>Every publish goes through the same reviewed flow. These are screenshots of the live <a href="post/">Post to TikTok</a> page on this site.</p>
+      <div class="shots">
+        <figure class="shot">
+          <img src="assets/shot-1.png" alt="Simby Studio publishing screen showing the connected TikTok creator account and the selected video" width="900" height="575" loading="lazy" />
+          <figcaption>Connected creator account and selected clip</figcaption>
+        </figure>
+        <figure class="shot">
+          <img src="assets/shot-2.png" alt="Privacy level selector with no default and interaction toggles that are off by default" width="900" height="575" loading="lazy" />
+          <figcaption>Privacy and interaction settings</figcaption>
+        </figure>
+        <figure class="shot">
+          <img src="assets/shot-3.png" alt="Commercial content disclosure, consent checkbox, and upload status log" width="900" height="575" loading="lazy" />
+          <figcaption>Disclosure, consent, and upload status</figcaption>
+        </figure>
+      </div>
+
+      <h2>Built for one job, done properly</h2>
+      <div class="grid grid-2">
+        <div class="card">
+          <h3>Your account, your content</h3>
+          <p>Simby Studio only ever posts to accounts you personally authorize through the platform's own OAuth screen. It is not a bulk cross-posting service and it does not redistribute other people's videos.</p>
+        </div>
+        <div class="card">
+          <h3>Revoke access any time</h3>
+          <p>Access can be withdrawn from your TikTok or Google account security settings at any moment. Once revoked, Simby Studio can no longer read your profile or publish on your behalf.</p>
+        </div>
+      </div>
+
+      <div class="callout">
+        <p><strong>Questions about data handling?</strong> The <a href="privacy-policy/">Privacy Policy</a> lists exactly what is collected, why, how long it is kept, and how to request deletion. The <a href="terms/">Terms of Service</a> covers acceptable use.</p>
+      </div>
     </div>
   </main>
+
+  <footer class="site-footer">
+    <div class="inner">
+      <div class="fbrand">
+        <img src="icon-192.png" alt="Simby Studio" width="24" height="24" />
+        <span>Simby Studio</span>
+      </div>
+      <nav>
+        <a href="features/">Features</a>
+        <a href="how-it-works/">How it works</a>
+        <a href="support/">Support</a>
+        <a href="terms/">Terms of Service</a>
+        <a href="privacy-policy/">Privacy Policy</a>
+        <a href="mailto:support@simbystudio.com">support@simbystudio.com</a>
+      </nav>
+      <p class="copy">© 2026 Simby Studio. TikTok is a trademark of ByteDance Ltd. YouTube is a trademark of Google LLC. Simby Studio is not affiliated with or endorsed by either company.</p>
+    </div>
+  </footer>
 </body>
 </html>

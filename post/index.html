@@ -3,7 +3,11 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Post to TikTok · Simby Studio</title>
+  <title>Post to TikTok — Simby Studio</title>
+  <meta name="description" content="Simby Studio publishing screen for the TikTok Content Posting API: creator info, editable title, privacy with no default, interaction toggles off by default, commercial disclosure, preview, express consent, and status polling." />
+  <link rel="icon" href="../favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="192x192" href="../icon-192.png" />
+  <link rel="apple-touch-icon" href="../icon-192.png" />
   <style>
     :root { color-scheme: light; --bg:#0f1419; --card:#1a222d; --fg:#e8eef7; --muted:#9aa4b2; --line:#2a3441; --accent:#6ec1ff; --ok:#3ecf8e; --warn:#f0b429; --bad:#ff6b7a; }
     * { box-sizing: border-box; }
@@ -45,14 +49,20 @@
 </head>
 <body>
   <header>
-    <div>
-      <h1>Simby Studio</h1>
-      <p>Post to TikTok — Content Posting API (creator-controlled publish)</p>
+    <div style="display:flex;align-items:center;gap:12px;">
+      <img src="../icon-192.png" alt="Simby Studio" width="38" height="38" style="border-radius:9px;display:block;" />
+      <div>
+        <h1>Simby Studio</h1>
+        <p>Post to TikTok — Content Posting API (creator-controlled publish)</p>
+      </div>
     </div>
     <nav>
       <a href="../">Home</a>
+      <a href="../features/">Features</a>
+      <a href="../how-it-works/">How it works</a>
+      <a href="../support/">Support</a>
       <a href="../terms/">Terms of Service</a>
-      <a href="../privacy/">Privacy Policy</a>
+      <a href="../privacy-policy/">Privacy Policy</a>
     </nav>
   </header>
 
@@ -151,6 +161,24 @@
       <div id="statusLog" style="margin-top:14px">Status: idle</div>
     </section>
   </main>
+
+  <footer style="border-top:1px solid var(--line);background:#0c1116;margin-top:8px;">
+    <div style="max-width:880px;margin:0 auto;padding:26px 20px 34px;display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;font-size:.9rem;">
+      <span style="display:flex;align-items:center;gap:9px;color:var(--fg);font-weight:700;">
+        <img src="../icon-192.png" alt="Simby Studio" width="24" height="24" style="border-radius:6px;display:block;" />
+        Simby Studio
+      </span>
+      <span style="display:flex;gap:18px;flex-wrap:wrap;align-items:center;">
+        <a href="../features/" style="color:var(--muted)">Features</a>
+        <a href="../how-it-works/" style="color:var(--muted)">How it works</a>
+        <a href="../support/" style="color:var(--muted)">Support</a>
+        <a href="../terms/" style="color:var(--muted)">Terms of Service</a>
+        <a href="../privacy-policy/" style="color:var(--muted)">Privacy Policy</a>
+        <a href="mailto:support@simbystudio.com" style="color:var(--muted)">support@simbystudio.com</a>
+      </span>
+      <p style="color:#6e808f;width:100%;margin:0;font-size:.85rem;">© 2026 Simby Studio. TikTok is a trademark of ByteDance Ltd. Simby Studio is not affiliated with or endorsed by ByteDance Ltd.</p>
+    </div>
+  </footer>
 
   <script>
     /**
