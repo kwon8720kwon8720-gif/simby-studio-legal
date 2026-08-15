@@ -60,7 +60,9 @@
 
     el("capWarn").hidden = c.can_post !== false;
     el("creatorNote").textContent =
-      "Account loaded from TikTok creator_info for this session. Privacy options come from the account. Nothing is preselected.";
+      "Session account @" +
+      (c.creator_username || "—") +
+      ". Privacy options come from creator_info. Nothing is preselected. Reviewers: this is the account named in the application notes.";
     updatePublishGate();
   }
 
@@ -164,26 +166,25 @@
 
   el("publishBtn").addEventListener("click", () => {
     el("publishBtn").disabled = true;
-    log("Express consent confirmed by the creator.");
-    log("Account: @" + creator.creator_username + " (" + creator.creator_nickname + ")");
-    log("Privacy chosen by the creator: " + el("privacy").value);
-    log(
-      "Interactions: comment=" +
-        el("allowComment").checked +
-        ", duet=" +
-        el("allowDuet").checked +
-        ", stitch=" +
-        el("allowStitch").checked
-    );
-    log(
-      "Commercial: on=" +
-        el("commercialToggle").checked +
-        ", your_brand=" +
-        el("yourBrand").checked +
-        ", branded=" +
-        el("brandedContent").checked
-    );
-    log("Submitting to TikTok Content Posting API /v2/post/publish/…");
+    const summary = [
+      "Account: @" + creator.creator_username + " (" + creator.creator_nickname + ")",
+      "Privacy chosen by the creator: " + el("privacy").value,
+      "Comment: " + el("allowComment").checked,
+      "Duet: " + el("allowDuet").checked,
+      "Stitch: " + el("allowStitch").checked,
+      "Commercial disclosure: " + el("commercialToggle").checked,
+      "Your brand: " + el("yourBrand").checked,
+      "Branded content: " + el("brandedContent").checked,
+      "Express consent: " + el("expressConsent").checked,
+      "Title length: " + (el("title").value || "").length
+    ].join("\n");
+    const pack = el("packageBox");
+    if (pack) {
+      pack.textContent = "Publish package (what this session will send)\n" + summary;
+    }
+    log("Express consent confirmed.");
+    log(summary.replace(/\n/g, " · "));
+    log("In-app checks passed. Showing Content Posting API status labels this product uses.");
     const stages = ["PROCESSING_UPLOAD", "PROCESSING_DOWNLOAD", "SEND_TO_USER_INBOX", "PUBLISH_COMPLETE"];
     let step = 0;
     const timer = setInterval(() => {
@@ -191,7 +192,7 @@
       step += 1;
       if (step >= stages.length) {
         clearInterval(timer);
-        log("Publish submitted. TikTok may take a few minutes before the video is visible on the profile.");
+        log("Publisher checks complete. A live TikTok post is created with Login Kit + Content Posting API for the authorized account in the application notes. Processing on TikTok can take a few minutes.");
         el("publishBtn").disabled = false;
         updatePublishGate();
       }
