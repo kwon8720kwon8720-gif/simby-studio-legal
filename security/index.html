@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Security — Simby Studio</title>
+  <meta name="description" content="How Simby Studio stores tokens, what TikTok scopes are requested, how to revoke access, and how to request deletion." />
+  <link rel="canonical" href="https://simbystudio.com/security/" />
+  <link rel="icon" href="../favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="192x192" href="../icon-192.png" />
+  <link rel="apple-touch-icon" href="../icon-192.png" />
+  <link rel="stylesheet" href="../assets/site.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="inner">
+      <a class="brand" href="../">
+        <img src="../icon-192.png" alt="" width="30" height="30" />
+        <span>Simby Studio</span>
+      </a>
+      <nav class="site-nav">
+        <a href="../features/">Features</a>
+        <a href="../how-it-works/">How it works</a>
+        <a href="../about/">About</a>
+        <a href="./" aria-current="page">Security</a>
+        <a href="../support/">Support</a>
+        <a href="../terms/">Terms of Service</a>
+        <a href="../privacy-policy/">Privacy Policy</a>
+      </nav>
+    </div>
+    <div class="legal-bar">
+      <div class="inner">
+        <a href="../terms/">Terms of Service</a>
+        <span class="sep" aria-hidden="true">·</span>
+        <a href="../privacy-policy/">Privacy Policy</a>
+        <span class="sep" aria-hidden="true">·</span>
+        <a href="mailto:support@simbystudio.com">support@simbystudio.com</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="wrap narrow">
+      <span class="kicker">Trust</span>
+      <h1>Security &amp; data handling</h1>
+      <p class="lead">Simby Studio is designed so that TikTok credentials and video files do not need to sit on a Simby Studio media server.</p>
+
+      <h2>Authentication</h2>
+      <p>Sign-in happens on TikTok’s own Login Kit screen. Simby Studio never collects the user’s TikTok password. The OAuth redirect returns to <code>https://simbystudio.com/oauth/callback/</code>, which hands the result back to the desktop companion on the user’s machine.</p>
+
+      <h2>Where tokens live</h2>
+      <p>Access and refresh tokens are stored on the user’s device in a permission-restricted secrets file. They are not uploaded to a Simby Studio backend, because the product does not operate a content server. The video file is read locally and sent to TikTok’s API for the publish the user requested.</p>
+
+      <h2>Minimum scopes</h2>
+      <table class="data">
+        <thead>
+          <tr><th>Scope</th><th>Limit</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><code>user.info.basic</code></td><td>Destination account identity and posting limits only. Not messages, not followers, not other people’s videos.</td></tr>
+          <tr><td><code>video.upload</code></td><td>The file the user selected in that session.</td></tr>
+          <tr><td><code>video.publish</code></td><td>Only after express consent in the publisher.</td></tr>
+        </tbody>
+      </table>
+
+      <h2>Transport</h2>
+      <p>This website is served over HTTPS. Calls to TikTok and Google APIs use HTTPS. There are no advertising cookies and no third-party analytics pixels on these pages.</p>
+
+      <h2>Revoke and delete</h2>
+      <ul>
+        <li>TikTok: Settings and privacy → Security and permissions → Apps and services → remove Simby Studio.</li>
+        <li>YouTube / Google: <a href="https://myaccount.google.com/permissions" rel="noopener">myaccount.google.com/permissions</a>.</li>
+        <li>Deletion mail: <a href="mailto:support@simbystudio.com">support@simbystudio.com</a> with subject <em>Data deletion request</em> and the connected username. We complete requests within 30 days.</li>
+      </ul>
+
+      <p>The full legal text is the <a href="../privacy-policy/">Privacy Policy</a>.</p>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="inner">
+      <div class="fbrand">
+        <img src="../icon-192.png" alt="" width="24" height="24" />
+        <span>Simby Studio</span>
+      </div>
+      <nav>
+        <a href="../about/">About</a>
+        <a href="../support/">Support</a>
+        <a href="../terms/">Terms of Service</a>
+        <a href="../privacy-policy/">Privacy Policy</a>
+        <a href="mailto:support@simbystudio.com">support@simbystudio.com</a>
+      </nav>
+      <p class="copy">© 2026 Simby Studio.</p>
+    </div>
+  </footer>
+</body>
+</html>

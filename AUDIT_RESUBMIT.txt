@@ -1,30 +1,64 @@
-TikTok App / Content Posting API — Resubmission notes (2026-07-29)
+TikTok resubmit — Simby Studio — 2026-08-15
 
-App: Simby Studio
-Website: https://kwon8720kwon8720-gif.github.io/simby-studio-legal/
-Post UX: https://kwon8720kwon8720-gif.github.io/simby-studio-legal/post/
-Terms: https://kwon8720kwon8720-gif.github.io/simby-studio-legal/terms/
-Privacy: https://kwon8720kwon8720-gif.github.io/simby-studio-legal/privacy/
+Website URL (use this, nothing else):
+https://simbystudio.com
 
-Why previously rejected (industry-common + our gap):
-- UX Guidelines Point 2)b Privacy Status had an effective default / hardcoded SELF_ONLY path in the old demo UI.
-- Old demo did not clearly show commercial disclosure, interaction toggles off-by-default, Music Usage Confirmation, express consent, or status polling.
+Terms of Service:
+https://simbystudio.com/terms/
 
-What changed in this revision:
-1. Creator info card shows nickname / username / max duration (Point 1).
-2. Privacy dropdown is populated from creator_info options and has NO selected default — user must choose (Point 2b).
-3. Comment / Duet / Stitch are unchecked by default; disabled/greyed when creator_info says so (Point 2c).
-4. Commercial disclosure toggle OFF by default; Your Brand / Branded Content; branded content cannot be Only me (Point 3).
-5. Consent text switches to include Branded Content Policy when needed + Music Usage Confirmation always (Point 4).
-6. Content preview, no watermark added by app, editable title, express consent checkbox required before Post, processing notice, status polling demo (Point 5).
-7. Website header always shows Terms + Privacy without opening a menu.
+Privacy Policy:
+https://simbystudio.com/privacy-policy/
 
-Scopes used:
-- user.info.basic — show which TikTok account will receive the post
-- video.upload / video.publish — Content Posting API after explicit user consent
+Redirect URI:
+https://simbystudio.com/oauth/callback/
 
-Intended use:
-Simby Studio helps creators publish their own short gameplay videos to their own TikTok accounts with full control of privacy, interactions, and commercial disclosure. It is not a bulk cross-post scraper of arbitrary third-party content.
+App name (must match the site tab):
+Simby Studio
 
-Demo video:
-Shows Home (Terms/Privacy visible) → Post to TikTok → creator info → select video → preview → manually select privacy → leave interactions off then optionally enable → commercial disclosure off/on → consent → Post → status updates.
+--- Application / 신청 사유 (paste in English) ---
+
+App name: Simby Studio
+Website URL: https://simbystudio.com
+Terms of Service: https://simbystudio.com/terms/
+Privacy Policy: https://simbystudio.com/privacy-policy/
+Redirect URI: https://simbystudio.com/oauth/callback/
+
+The Website URL opens the live Simby Studio publisher.
+It is a fully developed product, not a marketing landing page and not a login wall.
+
+On first load the reviewer can:
+1. See the connected TikTok account (nickname, username, max duration from creator_info)
+2. Select a video and preview it. Simby Studio adds no watermark.
+3. Edit the title.
+4. Choose privacy. There is NO preselected default.
+5. See Comment / Duet / Stitch all OFF by default.
+6. See commercial disclosure OFF by default. Branded content cannot use "Only me".
+7. Read Music Usage Confirmation (and Branded Content Policy when disclosure is on).
+8. Tick express consent. The Post button stays disabled until video + privacy + consent are complete.
+9. Submit through the TikTok Content Posting API and watch publish/status.
+
+Terms of Service and Privacy Policy links are visible in the gold bar under the header and again in the footer, without opening a menu.
+
+This is a public creator product. It publishes the creator's own gameplay clips to the creator's own TikTok account. It is not for private personal use only, and it does not redistribute third-party content.
+
+Scopes:
+- user.info.basic : show the destination account and posting limits
+- video.upload    : transfer the selected file for preview
+- video.publish   : publish after express in-app consent
+
+How to test (no website login wall):
+1. Open https://simbystudio.com
+2. The Post to TikTok form is the first screen
+3. Select any short MP4, choose a privacy status, tick consent, click Post
+
+If TikTok Login Kit is required during review, use:
+  TikTok username: [FILL]
+  Password: [FILL]
+  2FA: disabled until review completes
+
+Additional pages on the same domain:
+https://simbystudio.com/about/
+https://simbystudio.com/security/
+https://simbystudio.com/features/
+https://simbystudio.com/how-it-works/
+https://simbystudio.com/support/
